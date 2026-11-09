@@ -137,7 +137,7 @@
             align-items: center;
         }
         
-        .input-group input {
+        .input-group input, .input-group textarea {
             flex: 1;
         }
         
@@ -171,25 +171,10 @@
             min-height: 44px;
         }
         
-        .btn-primary {
-            background: #1e88e5;
-            color: white;
-        }
-        
-        .btn-success {
-            background: #4caf50;
-            color: white;
-        }
-        
-        .btn-warning {
-            background: #ff9800;
-            color: white;
-        }
-        
-        .btn-danger {
-            background: #f44336;
-            color: white;
-        }
+        .btn-primary { background: #1e88e5; color: white; }
+        .btn-success { background: #4caf50; color: white; }
+        .btn-warning { background: #ff9800; color: white; }
+        .btn-danger { background: #f44336; color: white; }
         
         .button-row {
             display: flex;
@@ -264,41 +249,9 @@
         
         /* Responsive */
         @media (max-width: 768px) {
-            .form-grid {
-                grid-template-columns: 1fr;
-            }
-            
-            .btn {
-                width: 100%;
-                margin: 5px 0;
-            }
-            
-            .button-row {
-                flex-direction: column;
-            }
-        }
-        
-        @media (max-width: 480px) {
-            body {
-                padding: 8px;
-            }
-            
-            .container {
-                padding: 12px;
-            }
-            
-            header {
-                padding: 15px 12px;
-                margin: -12px -12px 15px -12px;
-            }
-            
-            header h1 {
-                font-size: 1.3rem;
-            }
-            
-            .section-title {
-                font-size: 1.1rem;
-            }
+            .form-grid { grid-template-columns: 1fr; }
+            .btn { width: 100%; margin: 5px 0; }
+            .button-row { flex-direction: column; }
         }
     </style>
 </head>
@@ -320,9 +273,7 @@
                     <label for="ttNgaySinh"><i class="fas fa-sort-numeric-down"></i> TT Ngày Sinh:</label>
                     <div class="input-group">
                         <input type="number" id="ttNgaySinh" class="form-control" placeholder="VD: 25993" value="25993">
-                        <button class="btn-copy" onclick="copyValue('ttNgaySinh')">
-                            <i class="fas fa-copy"></i>
-                        </button>
+                        <button class="btn-copy" onclick="copyValue('ttNgaySinh')"><i class="fas fa-copy"></i></button>
                     </div>
                 </div>
                 
@@ -330,9 +281,7 @@
                     <label for="ngayVanHan"><i class="fas fa-calendar-day"></i> Ngày Vận Hạn:</label>
                     <div class="input-group">
                         <input type="date" id="ngayVanHan" class="form-control" value="2025-03-22">
-                        <button class="btn-copy" onclick="copyValue('ngayVanHan')">
-                            <i class="fas fa-copy"></i>
-                        </button>
+                        <button class="btn-copy" onclick="copyValue('ngayVanHan')"><i class="fas fa-copy"></i></button>
                     </div>
                 </div>
                 
@@ -340,9 +289,7 @@
                     <label for="ttNgayVH"><i class="fas fa-sort-numeric-down"></i> TT Ngày VH:</label>
                     <div class="input-group">
                         <input type="number" id="ttNgayVH" class="form-control" placeholder="VD: 45736" value="45736">
-                        <button class="btn-copy" onclick="copyValue('ttNgayVH')">
-                            <i class="fas fa-copy"></i>
-                        </button>
+                        <button class="btn-copy" onclick="copyValue('ttNgayVH')"><i class="fas fa-copy"></i></button>
                     </div>
                 </div>
                 
@@ -350,9 +297,7 @@
                     <label for="amLich"><i class="fas fa-moon"></i> Âm Lịch:</label>
                     <div class="input-group">
                         <input type="text" id="amLich" class="form-control" placeholder="22/2/2025" value="22/2/2025">
-                        <button class="btn-copy" onclick="copyValue('amLich')">
-                            <i class="fas fa-copy"></i>
-                        </button>
+                        <button class="btn-copy" onclick="copyValue('amLich')"><i class="fas fa-copy"></i></button>
                     </div>
                 </div>
                 
@@ -360,9 +305,7 @@
                     <label for="duongLich"><i class="fas fa-calendar"></i> Dương Lịch:</label>
                     <div class="input-group">
                         <input type="text" id="duongLich" class="form-control" placeholder="22/03/2025" value="22/03/2025">
-                        <button class="btn-copy" onclick="copyValue('duongLich')">
-                            <i class="fas fa-copy"></i>
-                        </button>
+                        <button class="btn-copy" onclick="copyValue('duongLich')"><i class="fas fa-copy"></i></button>
                     </div>
                 </div>
                 
@@ -370,9 +313,7 @@
                     <label for="gio"><i class="fas fa-clock"></i> Giờ:</label>
                     <div class="input-group">
                         <input type="time" id="gio" class="form-control" value="06:49">
-                        <button class="btn-copy" onclick="copyValue('gio')">
-                            <i class="fas fa-copy"></i>
-                        </button>
+                        <button class="btn-copy" onclick="copyValue('gio')"><i class="fas fa-copy"></i></button>
                     </div>
                 </div>
                 
@@ -380,9 +321,7 @@
                     <label for="soTT"><i class="fas fa-hashtag"></i> Số TT:</label>
                     <div class="input-group">
                         <input type="number" id="soTT" class="form-control" placeholder="VD: 409" value="409">
-                        <button class="btn-copy" onclick="copyValue('soTT')">
-                            <i class="fas fa-copy"></i>
-                        </button>
+                        <button class="btn-copy" onclick="copyValue('soTT')"><i class="fas fa-copy"></i></button>
                     </div>
                 </div>
                 
@@ -390,9 +329,7 @@
                     <label for="ten"><i class="fas fa-user"></i> Tên:</label>
                     <div class="input-group">
                         <input type="text" id="ten" class="form-control" placeholder="VD: NAM" value="NAM">
-                        <button class="btn-copy" onclick="copyValue('ten')">
-                            <i class="fas fa-copy"></i>
-                        </button>
+                        <button class="btn-copy" onclick="copyValue('ten')"><i class="fas fa-copy"></i></button>
                     </div>
                 </div>
                 
@@ -400,9 +337,7 @@
                     <label for="trieuChung"><i class="fas fa-heartbeat"></i> Triệu chứng:</label>
                     <div class="input-group">
                         <textarea id="trieuChung" class="form-control" rows="2" placeholder="Hoa mắt, chóng mặt...">Hoa mắt, chóng mặt</textarea>
-                        <button class="btn-copy" onclick="copyValue('trieuChung')">
-                            <i class="fas fa-copy"></i>
-                        </button>
+                        <button class="btn-copy" onclick="copyValue('trieuChung')"><i class="fas fa-copy"></i></button>
                     </div>
                 </div>
                 
@@ -410,9 +345,7 @@
                     <label for="tietKhi"><i class="fas fa-leaf"></i> Tiết khí:</label>
                     <div class="input-group">
                         <input type="text" id="tietKhi" class="form-control" placeholder="Tiết khí">
-                        <button class="btn-copy" onclick="copyValue('tietKhi')">
-                            <i class="fas fa-copy"></i>
-                        </button>
+                        <button class="btn-copy" onclick="copyValue('tietKhi')"><i class="fas fa-copy"></i></button>
                     </div>
                 </div>
                 
@@ -420,9 +353,7 @@
                     <label for="anDong"><i class="fas fa-utensils"></i> Ăn Đông:</label>
                     <div class="input-group">
                         <input type="text" id="anDong" class="form-control" placeholder="Ăn Đông">
-                        <button class="btn-copy" onclick="copyValue('anDong')">
-                            <i class="fas fa-copy"></i>
-                        </button>
+                        <button class="btn-copy" onclick="copyValue('anDong')"><i class="fas fa-copy"></i></button>
                     </div>
                 </div>
                 
@@ -430,9 +361,7 @@
                     <label for="anTay"><i class="fas fa-utensils"></i> Ăn Tây:</label>
                     <div class="input-group">
                         <input type="text" id="anTay" class="form-control" placeholder="Ăn Tây">
-                        <button class="btn-copy" onclick="copyValue('anTay')">
-                            <i class="fas fa-copy"></i>
-                        </button>
+                        <button class="btn-copy" onclick="copyValue('anTay')"><i class="fas fa-copy"></i></button>
                     </div>
                 </div>
                 
@@ -440,9 +369,7 @@
                     <label for="tayY"><i class="fas fa-pills"></i> Tây Y:</label>
                     <div class="input-group">
                         <input type="text" id="tayY" class="form-control" placeholder="Tây Y">
-                        <button class="btn-copy" onclick="copyValue('tayY')">
-                            <i class="fas fa-copy"></i>
-                        </button>
+                        <button class="btn-copy" onclick="copyValue('tayY')"><i class="fas fa-copy"></i></button>
                     </div>
                 </div>
                 
@@ -450,9 +377,7 @@
                     <label for="duongSinh"><i class="fas fa-spa"></i> Dưỡng sinh:</label>
                     <div class="input-group">
                         <input type="text" id="duongSinh" class="form-control" placeholder="Dưỡng sinh">
-                        <button class="btn-copy" onclick="copyValue('duongSinh')">
-                            <i class="fas fa-copy"></i>
-                        </button>
+                        <button class="btn-copy" onclick="copyValue('duongSinh')"><i class="fas fa-copy"></i></button>
                     </div>
                 </div>
                 
@@ -460,9 +385,7 @@
                     <label for="monAnGiaVi"><i class="fas fa-pepper-hot"></i> Món ăn gia vị:</label>
                     <div class="input-group">
                         <input type="text" id="monAnGiaVi" class="form-control" placeholder="Món ăn gia vị">
-                        <button class="btn-copy" onclick="copyValue('monAnGiaVi')">
-                            <i class="fas fa-copy"></i>
-                        </button>
+                        <button class="btn-copy" onclick="copyValue('monAnGiaVi')"><i class="fas fa-copy"></i></button>
                     </div>
                 </div>
                 
@@ -470,26 +393,16 @@
                     <label for="homTruoc"><i class="fas fa-history"></i> Hôm trước:</label>
                     <div class="input-group">
                         <input type="text" id="homTruoc" class="form-control" placeholder="Hôm trước">
-                        <button class="btn-copy" onclick="copyValue('homTruoc')">
-                            <i class="fas fa-copy"></i>
-                        </button>
+                        <button class="btn-copy" onclick="copyValue('homTruoc')"><i class="fas fa-copy"></i></button>
                     </div>
                 </div>
             </div>
             
             <div class="button-row">
-                <button class="btn btn-success" onclick="addNewRow()">
-                    <i class="fas fa-plus"></i> Thêm Dòng
-                </button>
-                <button class="btn btn-primary" onclick="calculateAll()">
-                    <i class="fas fa-calculator"></i> Tính Toán
-                </button>
-                <button class="btn btn-warning" onclick="clearForm()">
-                    <i class="fas fa-eraser"></i> Xóa Form
-                </button>
-                <button class="btn btn-danger" onclick="clearTable()">
-                    <i class="fas fa-trash"></i> Xóa Bảng
-                </button>
+                <button class="btn btn-success" onclick="addNewRow()"><i class="fas fa-plus"></i> Thêm Dòng</button>
+                <button class="btn btn-primary" onclick="calculateAll()"><i class="fas fa-calculator"></i> Tính Toán</button>
+                <button class="btn btn-warning" onclick="clearForm()"><i class="fas fa-eraser"></i> Xóa Form</button>
+                <button class="btn btn-danger" onclick="clearTable()"><i class="fas fa-trash"></i> Xóa Bảng</button>
             </div>
         </div>
 
@@ -530,40 +443,30 @@
             </div>
             
             <div style="text-align: center; margin-top: 15px;">
-                <button class="btn btn-primary" onclick="exportData()">
-                    <i class="fas fa-download"></i> Xuất Dữ Liệu
-                </button>
-                <button class="btn btn-warning" onclick="importData()">
-                    <i class="fas fa-upload"></i> Nhập Dữ Liệu
-                </button>
+                <button class="btn btn-primary" onclick="exportData()"><i class="fas fa-download"></i> Xuất Dữ Liệu</button>
+                <button class="btn btn-warning" onclick="importData()"><i class="fas fa-upload"></i> Nhập Dữ Liệu</button>
             </div>
         </div>
 
         <div class="footer">
-            <p>Công Cụ Tính Ngày Vận Hạn &copy; 2024 | Phiên bản 1.0</p>
+            <p>Công Cụ Tính Ngày Vận Hạn &copy; 2026 | Phiên bản 1.0</p>
         </div>
     </div>
 
     <script>
-        // Biến lưu trữ dữ liệu
         let data = [];
         let counter = 1;
         
-        // Hàm copy giá trị
         function copyValue(id) {
             const element = document.getElementById(id);
-            element.select();
-            element.setSelectionRange(0, 99999);
+            if (!element) return;
+            element.select?.();
+            element.setSelectionRange?.(0, 99999);
             navigator.clipboard.writeText(element.value)
-                .then(() => {
-                    alert('Đã sao chép: ' + element.value);
-                })
-                .catch(err => {
-                    console.error('Lỗi khi sao chép: ', err);
-                });
+                .then(() => alert('Đã sao chép: ' + element.value))
+                .catch(err => console.error('Lỗi khi sao chép: ', err));
         }
         
-        // Hàm thêm dòng mới
         function addNewRow() {
             const row = {
                 id: counter++,
@@ -590,17 +493,16 @@
             calculateAll();
         }
         
-        // Hàm định dạng ngày
         function formatDate(dateString) {
             if (!dateString) return '';
             const date = new Date(dateString);
+            if (isNaN(date)) return dateString;
             const day = date.getDate().toString().padStart(2, '0');
             const month = (date.getMonth() + 1).toString().padStart(2, '0');
             const year = date.getFullYear();
             return `${day}/${month}/${year}`;
         }
         
-        // Hàm cập nhật bảng
         function updateTable() {
             const tbody = document.getElementById('tableBody');
             tbody.innerHTML = '';
@@ -626,24 +528,18 @@
                     <td>${row.monAnGiaVi}</td>
                     <td>${row.homTruoc}</td>
                     <td>
-                        <button class="btn-copy" onclick="copyRow(${index})" style="padding: 5px 8px; font-size: 0.8rem;">
-                            <i class="fas fa-copy"></i>
-                        </button>
-                        <button class="btn-copy" onclick="deleteRow(${index})" style="padding: 5px 8px; font-size: 0.8rem; background: #f44336;">
-                            <i class="fas fa-trash"></i>
-                        </button>
+                        <button class="btn-copy" onclick="copyRow(${index})" style="padding: 5px 8px; font-size: 0.8rem;"><i class="fas fa-copy"></i></button>
+                        <button class="btn-copy" onclick="deleteRow(${index})" style="padding: 5px 8px; font-size: 0.8rem; background: #f44336;"><i class="fas fa-trash"></i></button>
                     </td>
                 `;
                 tbody.appendChild(tr);
             });
             
-            // Thêm dữ liệu mẫu nếu bảng trống
             if (data.length === 0) {
                 addSampleData();
             }
         }
         
-        // Hàm thêm dữ liệu mẫu
         function addSampleData() {
             const sampleData = [
                 {
@@ -664,78 +560,25 @@
                     duongSinh: '',
                     monAnGiaVi: '',
                     homTruoc: ''
-                },
-                {
-                    id: counter++,
-                    ttNgaySinh: '25993',
-                    ngayVanHan: '27/06/2025',
-                    ttNgayVH: '45833',
-                    amLich: '2/6/2025',
-                    duongLich: '27/6/2025',
-                    gio: '13:28',
-                    soTT: '808',
-                    ten: 'NAM',
-                    trieuChung: 'Dương bất thường',
-                    tietKhi: '',
-                    anDong: '',
-                    anTay: '',
-                    tayY: '',
-                    duongSinh: '',
-                    monAnGiaVi: '',
-                    homTruoc: ''
-                },
-                {
-                    id: counter++,
-                    ttNgaySinh: '25993',
-                    ngayVanHan: '28/06/2025',
-                    ttNgayVH: '45834',
-                    amLich: '3/6/2025',
-                    duongLich: '28/6/2025',
-                    gio: '16:35',
-                    soTT: '995',
-                    ten: 'NAM',
-                    trieuChung: 'Tim đập mạnh / nhịp yếu',
-                    tietKhi: '',
-                    anDong: '',
-                    anTay: '',
-                    tayY: '',
-                    duongSinh: '',
-                    monAnGiaVi: '',
-                    homTruoc: ''
                 }
             ];
-            
             data = [...sampleData];
             updateTable();
         }
         
-        // Hàm tính toán
         function calculateAll() {
-            // Đây là nơi bạn có thể thêm logic tính toán phức tạp
             alert('Đã tính toán xong tất cả dữ liệu!');
-            
-            // Cập nhật trạng thái
-            data.forEach((row, index) => {
-                // Thêm tính toán vào đây nếu cần
-            });
-            
             updateTable();
         }
         
-        // Hàm copy dòng
         function copyRow(index) {
             const row = data[index];
             const rowText = Object.values(row).slice(0, -1).join('\t');
             navigator.clipboard.writeText(rowText)
-                .then(() => {
-                    alert('Đã sao chép dòng ' + (index + 1));
-                })
-                .catch(err => {
-                    console.error('Lỗi khi sao chép: ', err);
-                });
+                .then(() => alert('Đã sao chép dòng ' + (index + 1)))
+                .catch(err => console.error('Lỗi khi sao chép: ', err));
         }
         
-        // Hàm xóa dòng
         function deleteRow(index) {
             if (confirm('Bạn có chắc muốn xóa dòng này?')) {
                 data.splice(index, 1);
@@ -743,7 +586,6 @@
             }
         }
         
-        // Hàm xóa form
         function clearForm() {
             if (confirm('Bạn có chắc muốn xóa tất cả dữ liệu trong form?')) {
                 document.getElementById('ttNgaySinh').value = '25993';
@@ -765,7 +607,6 @@
             }
         }
         
-        // Hàm xóa bảng
         function clearTable() {
             if (confirm('Bạn có chắc muốn xóa toàn bộ bảng dữ liệu?')) {
                 data = [];
@@ -774,41 +615,18 @@
             }
         }
         
-        // Hàm xuất dữ liệu
         function exportData() {
             if (data.length === 0) {
                 alert('Không có dữ liệu để xuất!');
                 return;
             }
-            
             const headers = ['TT', 'TT Ngày Sinh', 'Ngày Vận Hạn', 'TT Ngày VH', 'Âm Lịch', 'Dương Lịch', 'Giờ', 'Số TT', 'Tên', 'Triệu chứng', 'Tiết khí', 'Ăn Đông', 'Ăn Tây', 'Tây Y', 'Dưỡng sinh', 'Món ăn gia vị', 'Hôm trước'];
-            
             let csv = headers.join('\t') + '\n';
-            
             data.forEach(row => {
-                const values = [
-                    row.id,
-                    row.ttNgaySinh,
-                    row.ngayVanHan,
-                    row.ttNgayVH,
-                    row.amLich,
-                    row.duongLich,
-                    row.gio,
-                    row.soTT,
-                    row.ten,
-                    row.trieuChung,
-                    row.tietKhi,
-                    row.anDong,
-                    row.anTay,
-                    row.tayY,
-                    row.duongSinh,
-                    row.monAnGiaVi,
-                    row.homTruoc
-                ];
+                const values = [row.id, row.ttNgaySinh, row.ngayVanHan, row.ttNgayVH, row.amLich, row.duongLich, row.gio, row.soTT, row.ten, row.trieuChung, row.tietKhi, row.anDong, row.anTay, row.tayY, row.duongSinh, row.monAnGiaVi, row.homTruoc];
                 csv += values.join('\t') + '\n';
             });
-            
-            const blob = new Blob([csv], { type: 'text/plain' });
+            const blob = new Blob([csv], { type: 'text/plain;charset=utf-8' });
             const url = window.URL.createObjectURL(blob);
             const a = document.createElement('a');
             a.href = url;
@@ -819,39 +637,29 @@
             window.URL.revokeObjectURL(url);
         }
         
-        // Hàm nhập dữ liệu
         function importData() {
             const input = document.createElement('input');
             input.type = 'file';
             input.accept = '.txt,.csv';
-            
             input.onchange = function(e) {
                 const file = e.target.files[0];
                 const reader = new FileReader();
-                
                 reader.onload = function(e) {
-                    const content = e.target.result;
-                    processImportedData(content);
+                    processImportedData(e.target.result);
                 };
-                
                 reader.readAsText(file);
             };
-            
             input.click();
         }
         
-        // Hàm xử lý dữ liệu nhập
         function processImportedData(content) {
             const lines = content.split('\n').filter(line => line.trim() !== '');
             if (lines.length <= 1) {
                 alert('File không có dữ liệu hợp lệ!');
                 return;
             }
-            
             data = [];
             counter = 1;
-            
-            // Bỏ qua header
             for (let i = 1; i < lines.length; i++) {
                 const values = lines[i].split('\t');
                 if (values.length >= 10) {
@@ -877,22 +685,14 @@
                     data.push(row);
                 }
             }
-            
             updateTable();
-            alert('Đã nhập ' + data.length + ' dòng dữ liệu!');
+            alert('Nhập dữ liệu thành công!');
         }
-        
-        // Khởi tạo trang
-        document.addEventListener('DOMContentLoaded', function() {
-            // Thêm dữ liệu mẫu khi trang tải
+
+        // Khởi chạy dòng mẫu đầu tiên khi load trang
+        window.onload = function() {
             addSampleData();
-            
-            // Định dạng ngày mặc định cho input date
-            const today = new Date();
-            const tomorrow = new Date(today);
-            tomorrow.setDate(today.getDate() + 1);
-            document.getElementById('ngayVanHan').valueAsDate = tomorrow;
-        });
+        };
     </script>
 </body>
 </html>
